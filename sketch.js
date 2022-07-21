@@ -37,5 +37,17 @@ trex.velocityY = trex.velocityY + 0.8
 
 
 trex.collide(ground);
+spawnClouds()
 drawSprites();
 }
+ 
+
+function spawnClouds(){ if(frameCount % 60 == 0 ){
+cloud = createSprite(600,100,40,10)
+cloud.y = Math.round(random(10,160));
+ cloud.addImage("cloud",cloudImage);
+ cloud.velocityX = -3 
+cloud.scale = 0.5;
+cloud.depth = trex.depth 
+trex.depth +=1;
+ } }
